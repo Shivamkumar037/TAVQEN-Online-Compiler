@@ -14,9 +14,9 @@ import './styles.css';
 class AppErrorBoundary extends React.Component {
   constructor(props) { super(props); this.state = {error:null}; }
   static getDerivedStateFromError(error) { return {error}; }
-  componentDidCatch(error, info) { console.error('Online Compiler rendering error:', error, info); }
+  componentDidCatch(error, info) { console.error('TAVQEN rendering error:', error, info); }
   render() {
-    if (this.state.error) return <div style={{background:'#071426',color:'#fff',minHeight:'100vh',padding:32,fontFamily:'system-ui'}}><h2>Online Compiler could not load</h2><p style={{color:'#fca5a5'}}>{this.state.error.message}</p><p>Open browser DevTools (F12) → Console to see details.</p><button onClick={() => location.reload()}>Reload</button></div>;
+    if (this.state.error) return <div style={{background:'#071426',color:'#fff',minHeight:'100vh',padding:32,fontFamily:'system-ui'}}><h2>TAVQEN could not load</h2><p style={{color:'#fca5a5'}}>{this.state.error.message}</p><p>Open browser DevTools (F12) → Console to see details.</p><button onClick={() => location.reload()}>Reload</button></div>;
     return this.props.children;
   }
 }

@@ -12,21 +12,21 @@ import { createExecution, executionLanguage } from './execution';
 import { normalizeStoredCode } from './code-content';
 
 const STARTERS = {
-  java: { name: 'Main', ext: 'java', code: 'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, Online Compiler!");\n    }\n}' },
-  python: { name: 'main', ext: 'py', code: 'print("Hello, Online Compiler!")' },
-  c: { name: 'main', ext: 'c', code: '#include <stdio.h>\n\nint main() {\n    printf("Hello, Online Compiler!\\n");\n    return 0;\n}' },
-  cpp: { name: 'main', ext: 'cpp', code: '#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, Online Compiler!" << endl;\n    return 0;\n}' },
-  javascript: { name: 'index', ext: 'js', code: 'console.log("Hello, Online Compiler!");' },
-  typescript: { name: 'index', ext: 'ts', code: 'const message: string = "Hello, Online Compiler!";\nconsole.log(message);' },
-  go: { name: 'main', ext: 'go', code: 'package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, Online Compiler!")\n}' },
-  rust: { name: 'main', ext: 'rs', code: 'fn main() {\n    println!("Hello, Online Compiler!");\n}' },
-  php: { name: 'index', ext: 'php', code: '<?php\necho "Hello, Online Compiler!";\n?>' },
-  html: { name: 'index', ext: 'html', code: '<!doctype html>\n<html>\n<head><title>Hello</title></head>\n<body><h1>Hello, Online Compiler!</h1></body>\n</html>' },
-  sql: { name: 'query', ext: 'sql', code: 'SELECT "Hello, Online Compiler!" AS message;' },
-  ruby: { name: 'main', ext: 'rb', code: 'puts "Hello, Online Compiler!"' },
-  kotlin: { name: 'Main', ext: 'kt', code: 'fun main() {\n    println("Hello, Online Compiler!")\n}' },
-  swift: { name: 'main', ext: 'swift', code: 'print("Hello, Online Compiler!")' },
-  csharp: { name: 'Program', ext: 'cs', code: 'using System;\nclass Program {\n    static void Main() { Console.WriteLine("Hello, Online Compiler!"); }\n}' },
+  java: { name: 'Main', ext: 'java', code: 'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, TAVQEN!");\n    }\n}' },
+  python: { name: 'main', ext: 'py', code: 'print("Hello, TAVQEN!")' },
+  c: { name: 'main', ext: 'c', code: '#include <stdio.h>\n\nint main() {\n    printf("Hello, TAVQEN!\\n");\n    return 0;\n}' },
+  cpp: { name: 'main', ext: 'cpp', code: '#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, TAVQEN!" << endl;\n    return 0;\n}' },
+  javascript: { name: 'index', ext: 'js', code: 'console.log("Hello, TAVQEN!");' },
+  typescript: { name: 'index', ext: 'ts', code: 'const message: string = "Hello, TAVQEN!";\nconsole.log(message);' },
+  go: { name: 'main', ext: 'go', code: 'package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, TAVQEN!")\n}' },
+  rust: { name: 'main', ext: 'rs', code: 'fn main() {\n    println!("Hello, TAVQEN!");\n}' },
+  php: { name: 'index', ext: 'php', code: '<?php\necho "Hello, TAVQEN!";\n?>' },
+  html: { name: 'index', ext: 'html', code: '<!doctype html>\n<html>\n<head><title>Hello</title></head>\n<body><h1>Hello, TAVQEN!</h1></body>\n</html>' },
+  sql: { name: 'query', ext: 'sql', code: 'SELECT "Hello, TAVQEN!" AS message;' },
+  ruby: { name: 'main', ext: 'rb', code: 'puts "Hello, TAVQEN!"' },
+  kotlin: { name: 'Main', ext: 'kt', code: 'fun main() {\n    println("Hello, TAVQEN!")\n}' },
+  swift: { name: 'main', ext: 'swift', code: 'print("Hello, TAVQEN!")' },
+  csharp: { name: 'Program', ext: 'cs', code: 'using System;\nclass Program {\n    static void Main() { Console.WriteLine("Hello, TAVQEN!"); }\n}' },
 };
 const FALLBACK_LANGS = [
   ['Java','java'], ['Python','python'], ['C','c'], ['C++','cpp'], ['JavaScript','javascript'],
@@ -484,9 +484,9 @@ export default function App() {
       <div className="brand-area">
         {loggedIn && <button className="hamburger icon-btn" title="Toggle file explorer" onClick={() => {if(window.matchMedia('(max-width: 760px)').matches) setMobileDrawer(v => !v); else setExplorerOpen(v => !v);}}><Menu size={19}/></button>}
         <div className="brand-mark"><Code2 size={22}/></div>
-        <div className="brand-copy"><strong>Online Compiler</strong><span>Code. Run. Learn.</span></div>
+        <div className="brand-copy"><strong>TAVQEN</strong><span>Code. Run. Learn.</span></div>
       </div>
-      <div className="workspace-select">{loggedIn ? <><Folder size={14}/> MY-WORKPLACE <ChevronDown size={13}/></> : <span className="guest-label">Online IDE</span>}</div>
+      {/* <div className="workspace-select">{loggedIn ? <><Folder size={14}/> MY-WORKPLACE <ChevronDown size={13}/></> : <span className="guest-label">Online IDE</span>}</div> */}
       <div className="top-actions">
         {loggedIn ? <>
           <button className={`assistant-toggle ${showAI ? 'active' : ''}`} onClick={() => {if(window.matchMedia('(max-width: 760px)').matches) setMobileAI(v => !v); else setAiOpen(v => !v);}}><Sparkles size={14}/> <span>AI Assistant</span></button>
